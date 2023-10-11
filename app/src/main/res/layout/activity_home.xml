@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-
     <Button
         android:id="@+id/btn_nearby"
         android:layout_width="160dp"
         android:layout_height="32dp"
-        android:padding="0dp"
         android:layout_marginStart="32dp"
         android:background="@drawable/homebutton"
+        android:padding="0dp"
         android:text="Nearby Spots"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,18 +21,12 @@
         android:id="@+id/btn_feeds"
         android:layout_width="160dp"
         android:layout_height="32dp"
-        android:padding="0dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/homebutton"
+        android:padding="0dp"
         android:text="Trending Spots"
         app:layout_constraintStart_toEndOf="@+id/btn_nearby"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrier2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left" />
 
     <TextView
         android:id="@+id/tv_popular"
@@ -47,6 +40,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_nearby" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_popular" />
+
     <TextView
         android:id="@+id/tv_nearby"
         android:layout_width="wrap_content"
@@ -57,6 +59,15 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_popular" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_popular" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nearby" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

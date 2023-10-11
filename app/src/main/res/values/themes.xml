@@ -7,4 +7,10 @@
 
     <style name="Theme.JalanInAja" parent="Base.Theme.JalanInAja" />
 
+    <style name="RoundedCorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+        <item name="color">#2C6553</item>
+    </style>
+
 </resources>
