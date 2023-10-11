@@ -6,4 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+
+    <Button
+        android:id="@+id/btn_nearby"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:padding="0dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/homebutton"
+        android:text="Nearby Spots"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_feeds"
+        android:layout_width="160dp"
+        android:layout_height="32dp"
+        android:padding="0dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/homebutton"
+        android:text="Trending Spots"
+        app:layout_constraintStart_toEndOf="@+id/btn_nearby"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
+
+    <TextView
+        android:id="@+id/tv_popular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Popular Places"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nearby" />
+
+    <TextView
+        android:id="@+id/tv_nearby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Near You"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_popular" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
