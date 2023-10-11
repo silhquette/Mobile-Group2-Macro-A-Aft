@@ -6,27 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <ImageView
+        android:id="@+id/img_hero"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/b"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_location"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:padding="0dp"
+            android:text="Lokasi anda"
+            android:textSize="10sp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wisata Nusantara"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tv_hero"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Jelajahi Destinasi Wisata Seru di Beberapa Provinsi Indonesia"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="text"
+            android:text="Aku mau liburan ke..."
+            android:textColor="#B5B5B5"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/btn_toSpots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jelajahi Tempat Wisata"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_nearby"
         android:layout_width="160dp"
-        android:layout_height="32dp"
+        android:layout_height="38dp"
         android:layout_marginStart="32dp"
         android:background="@drawable/homebutton"
+        android:backgroundTint="@color/blue_4"
         android:padding="0dp"
         android:text="Nearby Spots"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/btn_feeds"
         android:layout_width="160dp"
-        android:layout_height="32dp"
+        android:layout_height="38dp"
         android:layout_marginStart="16dp"
         android:background="@drawable/homebutton"
+        android:backgroundTint="@color/blue_4"
         android:padding="0dp"
         android:text="Trending Spots"
         app:layout_constraintStart_toEndOf="@+id/btn_nearby"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_marginTop="16dp"/>
 
     <TextView
         android:id="@+id/tv_popular"
