@@ -1,11 +1,14 @@
 package com.example.jalanin_aja
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jalanin_aja.databinding.ActivityHomeBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityHomeBinding
     private lateinit var nearbyArrayList: ArrayList<NearbySpots>
     private lateinit var nearbyCardImage: Array<Int>
@@ -105,6 +108,8 @@ class HomeActivity : AppCompatActivity() {
 
         popularArrayList = arrayListOf<PopularSpots>()
         getPopularData()
+
+        binding.bottomNavigationView.setOnClickListener(this)
     }
 
     private fun getPopularData() {
@@ -122,5 +127,13 @@ class HomeActivity : AppCompatActivity() {
         }
         binding.rvNearby.adapter = NearbySpotAdapter(nearbyArrayList)
 
+    }
+
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.foods -> {
+                // TODO:  
+            }
+        }
     }
 }
