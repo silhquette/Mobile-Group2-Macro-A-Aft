@@ -87,9 +87,10 @@
                     android:hint="Aku mau liburan ke..."
                     android:inputType="text"
                     android:paddingVertical="4dp"
-                    android:textAlignment="center"
+                    android:textAlignment="viewStart"
+                    android:paddingStart="24dp"
                     android:textColor="#B5B5B5"
-                    android:textSize="12sp" />
+                    android:textSize="16sp" />
 
                 <Button
                     android:id="@+id/btn_toSpots"
@@ -179,16 +180,24 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="350dp"
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom"
-        android:background="@drawable/navigation"
-        app:menu="@menu/bottom_nav"
-        android:elevation="20dp"/>
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="24dp"
+        android:elevation="5dp"
+        android:translationZ="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:paddingHorizontal="30dp"
+            android:background="@drawable/navigation"
+            app:menu="@menu/bottom_nav"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconTint="@color/color_item_bottom_nav"/>
+    </androidx.cardview.widget.CardView>
 </RelativeLayout>
