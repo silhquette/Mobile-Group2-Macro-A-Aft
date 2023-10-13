@@ -3,7 +3,18 @@
     <style name="Base.Theme.JalanInAja" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">@color/color_status_bar</item>
     </style>
 
     <style name="Theme.JalanInAja" parent="Base.Theme.JalanInAja" />
+
+    <style name="RoundedCorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+        <item name="color">#2C6553</item>
+    </style>
+
+    <style name="HeroGrad" parent="CardView">
+            <item name="android:foreground">@drawable/home_gradient</item>
+    </style>
 </resources>
