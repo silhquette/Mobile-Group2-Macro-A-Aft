@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:clipToPadding="false">
+    android:clipToPadding="false"
+    tools:context=".HomeActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="350dp"
@@ -53,7 +53,10 @@
                     android:padding="0dp"
                     android:text="Lokasi anda"
                     android:textColor="@color/blue_4"
-                    android:textSize="10sp" />
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tv_title"
@@ -64,7 +67,10 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_location" />
 
                 <TextView
                     android:id="@+id/tv_hero"
@@ -75,7 +81,10 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
                 <EditText
                     android:id="@+id/et_Search"
@@ -87,21 +96,41 @@
                     android:hint="Aku mau liburan ke..."
                     android:inputType="text"
                     android:paddingVertical="4dp"
-                    android:textAlignment="viewStart"
                     android:paddingStart="24dp"
+                    android:textAlignment="viewStart"
                     android:textColor="#B5B5B5"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_hero" />
 
                 <Button
                     android:id="@+id/btn_toSpots"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="24dp"
                     android:backgroundTint="#2EFFFFFF"
                     android:paddingHorizontal="12dp"
                     android:paddingVertical="4dp"
-                    android:text="Jelajahi Tempat Wisata" />
-            </LinearLayout>
+                    android:text="Jelajahi Tempat Wisata"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/et_Search" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="36dp"
+                    android:src="@drawable/d"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_nearby"
@@ -109,7 +138,7 @@
                 android:layout_height="38dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/homebutton"
+                android:background="@drawable/btn_home"
                 android:backgroundTint="@color/blue_3"
                 android:padding="0dp"
                 android:text="Nearby Spots"
@@ -124,7 +153,7 @@
                 android:layout_height="38dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/homebutton"
+                android:background="@drawable/btn_home"
                 android:backgroundTint="@color/blue_3"
                 android:padding="0dp"
                 android:text="Trending Spots"
@@ -140,7 +169,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="20dp"
                 android:text="Popular Places"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_nearby" />
@@ -160,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="22dp"
                 android:text="Near You"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -186,18 +215,18 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        app:cardCornerRadius="24dp"
         android:elevation="5dp"
-        android:translationZ="10dp">
+        android:translationZ="10dp"
+        app:cardCornerRadius="24dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="350dp"
             android:layout_height="60dp"
-            android:paddingHorizontal="30dp"
             android:background="@drawable/navigation"
-            app:menu="@menu/bottom_nav"
+            android:paddingHorizontal="30dp"
+            app:itemIconTint="@color/color_item_bottom_nav"
             app:labelVisibilityMode="unlabeled"
-            app:itemIconTint="@color/color_item_bottom_nav"/>
+            app:menu="@menu/bottom_nav" />
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

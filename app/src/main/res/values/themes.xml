@@ -15,6 +15,6 @@
     </style>
 
     <style name="HeroGrad" parent="CardView">
-            <item name="android:foreground">@drawable/home_gradient</item>
+        <item name="android:foreground">@drawable/home_gradient</item>
     </style>
 </resources>

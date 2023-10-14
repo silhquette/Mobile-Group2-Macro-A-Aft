@@ -3,12 +3,14 @@ package com.example.jalanin_aja
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.jalanin_aja.databinding.ActivityHomeBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class HomeActivity : AppCompatActivity(), View.OnClickListener {
+class HomeActivity : AppCompatActivity(),
+    BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityHomeBinding
     private lateinit var nearbyArrayList: ArrayList<NearbySpots>
     private lateinit var nearbyCardImage: Array<Int>
@@ -109,7 +111,7 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
         popularArrayList = arrayListOf<PopularSpots>()
         getPopularData()
 
-        binding.bottomNavigationView.setOnClickListener(this)
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener(this)
     }
 
     private fun getPopularData() {
@@ -129,10 +131,22 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    override fun onClick(v: View) {
-        when (v.id) {
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.home -> {
+                val intent = Intent(this@HomeActivity, HomeActivity::class.java)
+                startActivity(intent)
+                OnNavigationItemSelectedListener@ true
+            }
             R.id.foods -> {
-                // TODO:  
+                val intent = Intent(this@HomeActivity, FoodListActivity::class.java)
+                startActivity(intent)
+                OnNavigationItemSelectedListener@ true
+            }
+            else -> {
+                val intent = Intent(this@HomeActivity, FoodListActivity::class.java)
+                startActivity(intent)
+                OnNavigationItemSelectedListener@ true
             }
         }
     }
