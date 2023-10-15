@@ -2,15 +2,16 @@ package com.example.jalanin_aja
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.jalanin_aja.databinding.ActivityFoodListBinding
 
-class FoodListActivity : AppCompatActivity() {
+class FoodListActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityFoodListBinding
     private lateinit var foodArrayList: ArrayList<Foods>
-    lateinit var cardImage: Array<Int>
-    lateinit var cardName: Array<String>
-    lateinit var cardAddress: Array<String>
+    private lateinit var cardImage: Array<Int>
+    private lateinit var cardName: Array<String>
+    private lateinit var cardAddress: Array<String>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -21,9 +22,27 @@ class FoodListActivity : AppCompatActivity() {
             R.drawable.makanan1,
             R.drawable.makanan2,
             R.drawable.makanan3,
+            R.drawable.makanan1,
+            R.drawable.makanan2,
+            R.drawable.makanan3,
+            R.drawable.makanan1,
+            R.drawable.makanan2,
+            R.drawable.makanan3,
+            R.drawable.makanan1,
+            R.drawable.makanan2,
+            R.drawable.makanan3,
         )
 
         cardName = arrayOf(
+            "Mie Aceh Cabang Satu",
+            "Ayam Tangkap Pak Asep",
+            "Mie Aceh tidak bernama",
+            "Mie Aceh Cabang Satu",
+            "Ayam Tangkap Pak Asep",
+            "Mie Aceh tidak bernama",
+            "Mie Aceh Cabang Satu",
+            "Ayam Tangkap Pak Asep",
+            "Mie Aceh tidak bernama",
             "Mie Aceh Cabang Satu",
             "Ayam Tangkap Pak Asep",
             "Mie Aceh tidak bernama",
@@ -33,11 +52,23 @@ class FoodListActivity : AppCompatActivity() {
             "Jl. T. Panglima Polem No.81, Peunayong, Kusalam, Kota Banda Aceh",
             "Jl. T. Panglima Polem No.82, Peunayong, Kusalam, Kota Banda Aceh",
             "Jl. T. Panglima Polem No.83, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.81, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.82, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.83, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.81, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.82, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.83, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.81, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.82, Peunayong, Kusalam, Kota Banda Aceh",
+            "Jl. T. Panglima Polem No.83, Peunayong, Kusalam, Kota Banda Aceh",
         )
 
         binding.rvFood.layoutManager = GridLayoutManager(this, 2)
         foodArrayList = arrayListOf<Foods>()
         getFoodsData()
+
+        // button
+        binding.btnBack.setOnClickListener(this)
     }
 
     private fun getFoodsData() {
@@ -46,5 +77,13 @@ class FoodListActivity : AppCompatActivity() {
             foodArrayList.add(foods)
         }
         binding.rvFood.adapter = FoodAdapter(foodArrayList)
+    }
+
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.btn_back -> {
+                onBackPressed()
+            }
+        }
     }
 }
