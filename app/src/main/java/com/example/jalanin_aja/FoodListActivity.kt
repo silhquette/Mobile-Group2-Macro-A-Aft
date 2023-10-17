@@ -1,8 +1,10 @@
 package com.example.jalanin_aja
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.jalanin_aja.databinding.ActivityFoodListBinding
 
@@ -69,11 +71,15 @@ class FoodListActivity : AppCompatActivity(), View.OnClickListener {
 
         // button
         binding.btnBack.setOnClickListener(this)
+
+        val adapter = FoodAdapter(foodArrayList)
+        binding.rvFood.adapter = adapter
+        adapter.setOnItemClickListener(this)
     }
 
     private fun getFoodsData() {
         for (i in cardImage.indices) {
-            val foods = Foods(cardImage[i], cardName[i], cardAddress[i])
+            val foods = Foods(cardImage[i], cardName[i], cardAddress[i], 0)
             foodArrayList.add(foods)
         }
         binding.rvFood.adapter = FoodAdapter(foodArrayList)
@@ -86,4 +92,10 @@ class FoodListActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+    private fun FoodAdapter.setOnItemClickListener(foodListActivity: FoodListActivity) {
+        val intent = Intent(this@FoodListActivity, FoodDetailActivity::class.java)
+        startActivity(intent)
+    }
 }
+
