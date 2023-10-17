@@ -4,25 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:background="@color/blue_1">
+    android:background="@color/blue_1"
+    tools:context=".FoodListActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="36dp"
+            android:src="@drawable/d"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00000000"
+            android:src="@drawable/baseline_keyboard_backspace_24"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_popular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:text="Jelajahi Wisata Kuliner Pilihan!"
-            android:textSize="20sp"
             android:textColor="@color/black"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_location"
@@ -32,6 +56,9 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/btn_food_location"
             android:paddingHorizontal="32dp"
+            android:drawableStart="@drawable/baseline_location_on_24"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/blue_4"
             android:text="Kabupaten Lebak"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -40,17 +67,20 @@
 
         <EditText
             android:id="@+id/et_Search"
-            android:layout_width="350dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/home_searchbar"
+            android:drawableStart="@drawable/baseline_search_24"
+            android:drawablePadding="5dp"
+            android:drawableTint="#B5B5B5"
             android:ems="12"
             android:hint="Cari makanan terdekat"
             android:inputType="text"
             android:paddingVertical="4dp"
             android:paddingStart="24dp"
             android:textAlignment="viewStart"
-            android:textColor="#B5B5B5"
+            android:textColor="#3E3E3E"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
@@ -61,8 +91,8 @@
             android:id="@+id/rv_food"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_Search" />
 
