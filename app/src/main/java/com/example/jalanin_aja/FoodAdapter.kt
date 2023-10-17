@@ -13,7 +13,6 @@ class FoodAdapter (private val foodList: ArrayList<Foods>) : RecyclerView.Adapte
         return FoodViewHolder(itemView)
     }
 
-
     override fun onBindViewHolder(holder: FoodAdapter.FoodViewHolder, position: Int) {
         val currentItem = foodList[position]
         holder.foodImage.setImageResource(currentItem.foodImage)
