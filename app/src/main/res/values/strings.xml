@@ -3,4 +3,26 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_food_list">FoodListActivity</string>
+    <string name="app_name">MacroProject</string>
+    <string name="aceh">TODO</string>
+    <string name="sumatera_utara">TODO</string>
+    <string name="kalimantan_timur">TODO</string>
+    <string name="kalimantan_selatan">TODO</string>
+    <string name="jawa_timur">TODO</string>
+    <string name="jawa_barat">TODO</string>
+    <string name="petualangan_wisata_anda">Petualangan Wisata Anda</string>
+    <string name="temukan_rasakan"><![CDATA[Temukan & Rasakan]]></string>
+    <string name="ellipse">TODO</string>
+    <string name="foto">TODO</string>
+    <string name="komponen_pencarian">TODO</string>
+    <string name="kotak_pencarian">TODO</string>
+    <string name="jawa_tengah">TODO</string>
+    <string name="petualangan">Cari Nama Provinsi</string>
+    <string name="temukan_dan_rasakan_petualangan_wisata_anda">Temukan dan Rasakan Petualangan Wisata Anda</string>
+    <string name="nanggroe_aceh_darussalam">Nanggroe Aceh Darussalam</string>
+    <string name="jabar">Jawa Barat</string>
+    <string name="jateng">Jawa Tengah</string>
+    <string name="kalsel">Kalimantan Selatan</string>
+    <string name="kaltim">Kalimantan Timur</string>
+    <string name="sumut">Sumatera Utara</string>
 </resources>

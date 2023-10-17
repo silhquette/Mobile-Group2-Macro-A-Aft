@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaftarProvinsiActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/img_ellipse"
+        android:layout_width="match_parent"
+        android:layout_height="251dp"
+        android:background="@drawable/ellipse"
+        android:contentDescription="@string/ellipse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="-55dp"
+        app:layout_editor_absoluteY="94dp"
+        tools:ignore="MissingConstraints,VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/tv_temukan"
+        android:layout_width="254dp"
+        android:layout_height="54dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/temukan_dan_rasakan_petualangan_wisata_anda"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_ellipse"
+        app:layout_constraintStart_toStartOf="@id/searchView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.423"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/img_foto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/foto"
+        android:contentDescription="@string/foto"
+        app:layout_constraintStart_toEndOf="@+id/tv_temukan"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="330dp"
+        android:layout_height="30dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/search_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:iconifiedByDefault="false"
+        app:queryHint="Cari Nama Provinsi"
+        app:layout_constraintTop_toBottomOf="@+id/tv_temukan">
+
+    </androidx.appcompat.widget.SearchView>
+
+    <ImageButton
+        android:id="@+id/ib_tmbl"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_margin="23.39dp"
+        android:background="@drawable/aceh"
+        android:contentDescription="@string/aceh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_ellipse"
+        tools:ignore="MissingConstraints,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/tv_aceh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/nanggroe_aceh_darussalam"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_tmbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.716"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ib_sumut"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_margin="18dp"
+        android:background="@drawable/sumatera_utara"
+        android:contentDescription="@string/sumatera_utara"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_tmbl"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_sumut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/sumut"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_sumut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ib_kaltim"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_margin="18dp"
+        android:background="@drawable/kalimantan_timur"
+        android:contentDescription="@string/kalimantan_timur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_sumut"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_kaltim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/kaltim"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_kaltim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ib_kalsel"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_margin="18dp"
+        android:background="@drawable/kalimantan_selatan"
+        android:contentDescription="@string/kalimantan_selatan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_kaltim"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_kalsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/kalsel"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_kalsel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ib_jateng"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_margin="18dp"
+        android:background="@drawable/jawa_tengah"
+        android:contentDescription="@string/jawa_tengah"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_kalsel"
+        tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tv_jateng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/jateng"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_jateng"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.775"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ib_jabar"
+        android:layout_width="290dp"
+        android:layout_height="80dp"
+        android:layout_margin="18dp"
+        android:background="@drawable/jawa_barat"
+        android:contentDescription="@string/jawa_barat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ib_jateng"
+        tools:ignore="MissingConstraints,VisualLintBounds" />
+
+    <TextView
+        android:id="@+id/tv_jabar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/jabar"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ib_jabar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="DuplicateIds,MissingConstraints,VisualLintBounds" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
