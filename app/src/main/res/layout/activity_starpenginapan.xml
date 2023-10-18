@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/starpeng"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="-150dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="-173dp" />
+
+            <ImageView
+                android:layout_width="473dp"
+                android:layout_height="424dp"
+                android:background="@drawable/starpengii"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.693"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="-215dp"
+                android:layout_marginTop="-430dp"
+                android:layout_marginLeft="-40dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="-150dp"
+                android:text="Rasakan kenyamanan menginap yang tak terlupakan!"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/caripenginapan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="125dp"/>
+
+            <EditText
+
+                android:id="@+id/inputnamalengkap"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="352dp"
+                android:hint="    Cari nama provinsi"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginLeft="70dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="25dp"
+                android:background="@drawable/iconsearch"
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="-390dp"
+                android:layout_marginLeft="40dp"
+                tools:layout_editor_absoluteX="49dp"
+                tools:layout_editor_absoluteY="139dp" />
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="125dp"
+                android:background="@drawable/aceh"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                tools:layout_editor_absoluteY="202dp" />
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="125dp"
+                android:background="@drawable/sumut"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                tools:layout_editor_absoluteY="336dp" />
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="125dp"
+                android:background="@drawable/kaltim"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="472dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"/>
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="125dp"
+                android:background="@drawable/kalsel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="608dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"/>
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="125dp"
+                android:background="@drawable/jateng"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="608dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"/>
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="125dp"
+                android:background="@drawable/jabar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="608dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="-810dp"
+                android:text="Nanggroe Aceh Darussalam"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="125dp"
+                android:text="Sumatera Utara"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="195dp"
+                android:layout_marginTop="125dp"
+                android:text="kalimantan Timur"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+                android:layout_marginTop="125dp"
+                android:text="kalimantan Selatan"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="125dp"
+                android:text="Jawa Tengah"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="125dp"
+                android:text="Jawa Barat"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="-1030dp"
+                android:background="@drawable/fotoprofil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.912"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="58dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
