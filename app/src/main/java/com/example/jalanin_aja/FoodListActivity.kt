@@ -4,11 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.jalanin_aja.databinding.ActivityFoodListBinding
 
-class FoodListActivity : AppCompatActivity(), View.OnClickListener {
+class FoodListActivity : AppCompatActivity(), View.OnClickListener, RecyclerViewClickListener {
     private lateinit var binding: ActivityFoodListBinding
     private lateinit var foodArrayList: ArrayList<Foods>
     private lateinit var cardImage: Array<Int>
@@ -66,15 +65,13 @@ class FoodListActivity : AppCompatActivity(), View.OnClickListener {
         )
 
         binding.rvFood.layoutManager = GridLayoutManager(this, 2)
+        binding.rvFood.setHasFixedSize(true)
         foodArrayList = arrayListOf<Foods>()
         getFoodsData()
 
-        // button
+        // button click
         binding.btnBack.setOnClickListener(this)
 
-        val adapter = FoodAdapter(foodArrayList)
-        binding.rvFood.adapter = adapter
-        adapter.setOnItemClickListener(this)
     }
 
     private fun getFoodsData() {
@@ -93,8 +90,8 @@ class FoodListActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    private fun FoodAdapter.setOnItemClickListener(foodListActivity: FoodListActivity) {
-        val intent = Intent(this@FoodListActivity, FoodDetailActivity::class.java)
+    override fun onItemClicked(currentItem: Any) {
+        val intent = Intent(this, FoodDetailActivity::class.java)
         startActivity(intent)
     }
 }

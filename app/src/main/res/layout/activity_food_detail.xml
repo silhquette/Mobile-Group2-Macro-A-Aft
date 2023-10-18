@@ -4,12 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FoodDetailActivity"
-    android:background="#9DBDE3">
+    android:background="@color/white"
+    tools:context=".FoodDetailActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_food_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="2"
+            tools:listitem="@layout/food_carousell"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -28,7 +38,7 @@
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="26dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="26dp"
             android:backgroundTint="#00000000"
             android:src="@drawable/baseline_keyboard_backspace_24"
@@ -37,23 +47,26 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
             android:text="Nama Makanan"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+            app:layout_constraintTop_toBottomOf="@+id/rv_food_image" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
             android:text="Mie aceh adalah masakan mie pedas khas Aceh di Indonesia. Mie kuning tebal dengan irisan daging sapi, daging kambing atau makanan laut seperti udang atau cumi disajikan dalam sup berjenis kari yang gurih dan pedas. "
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -74,13 +87,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <View
+            android:id="@+id/divider_2"
             android:layout_width="match_parent"
             android:layout_height="8dp"
             android:layout_marginTop="16dp"
-            android:background="#81A2CA"
+            android:background="#DADADA"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_read_more"
-            android:id="@+id/divider_2"/>
+            app:layout_constraintTop_toBottomOf="@id/btn_read_more" />
 
         <TextView
             android:id="@+id/tv_title_food"
@@ -96,24 +109,26 @@
             app:layout_constraintTop_toBottomOf="@+id/divider_2" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_marginTop="8dp"
             android:id="@+id/rv_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
             android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            tools:listitem="@layout/food_menu"
+            tools:itemCount="5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_food" />
 
         <View
+            android:id="@+id/divider_3"
             android:layout_width="match_parent"
             android:layout_height="8dp"
             android:layout_marginTop="16dp"
-            android:background="#81A2CA"
+            android:background="#DADADA"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_menu"
-            android:id="@+id/divider_3"/>
+            app:layout_constraintTop_toBottomOf="@id/rv_menu" />
 
         <TextView
             android:id="@+id/tv_title_maps"
@@ -145,12 +160,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="32dp"
             android:text="Toko Mie Aceh Serba Ada"
-            android:textStyle="bold"
-            android:textSize="16sp"
             android:textColor="@color/blue_5"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
@@ -160,22 +175,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:textColor="@color/blue_4"
-            android:layout_marginEnd="32dp"
             android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
             android:text="Jl. T.Panglima Polem No.81, Peunayong, Kusalam, Kota Banda Aceh, Aceh 23121"
+            android:textColor="@color/blue_4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_main_address" />
 
         <View
+            android:id="@+id/divider_4"
             android:layout_width="match_parent"
             android:layout_height="8dp"
             android:layout_marginTop="16dp"
-            android:background="#81A2CA"
+            android:background="#DADADA"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_detail_address"
-            android:id="@+id/divider_4"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_detail_address" />
 
         <TextView
             android:id="@+id/tv_title_amenity"
@@ -194,12 +209,14 @@
             android:id="@+id/rv_amenities"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:paddingBottom="16dp"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
             android:layout_marginTop="8dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/amenity_list"
+            android:layout_marginEnd="32dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title_amenity" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

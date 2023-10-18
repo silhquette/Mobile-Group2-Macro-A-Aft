@@ -11,6 +11,8 @@ class FoodDetailActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityFoodDetailBinding
     private lateinit var menuArrayList: ArrayList<Foods>
     private lateinit var amenityArrayList: ArrayList<Amenities>
+    private lateinit var carousellArrayList: ArrayList<Carousell>
+    private lateinit var carousellImage: Array<Int>
     private lateinit var amenity: Array<String>
     private lateinit var cardImage: Array<Int>
     private lateinit var cardName: Array<String>
@@ -64,8 +66,27 @@ class FoodDetailActivity : AppCompatActivity(), View.OnClickListener {
         amenityArrayList = arrayListOf<Amenities>()
         getAmenitiesData()
 
+        // carousell recycler view
+        carousellImage = arrayOf(
+            R.drawable.makanan1,
+            R.drawable.makanan2,
+            R.drawable.makanan1,
+        )
+
+        binding.rvFoodImage.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        carousellArrayList = arrayListOf<Carousell>()
+        getImagesData()
+
         // button
         binding.btnBack.setOnClickListener(this)
+    }
+
+    private fun getImagesData() {
+        for (i in carousellImage.indices) {
+            val carousell = Carousell(carousellImage[i])
+            carousellArrayList.add(carousell)
+        }
+        binding.rvFoodImage.adapter = CarousellAdapter(carousellArrayList)
     }
 
     private fun getAmenitiesData() {
