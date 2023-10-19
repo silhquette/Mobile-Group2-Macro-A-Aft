@@ -40,6 +40,9 @@
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".DaftarProvinsiActivity"
             android:exported="false" />
         <activity
             android:name=".WelcomeActivity"
