@@ -33,6 +33,7 @@
         android:text="Selanjutnya"
         android:textColor="@color/black"
         android:textSize="20dp"
+        android:id="@+id/btn_next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
