@@ -19,6 +19,15 @@
             android:name=".DistrictsActivity"
             android:exported="false" />
         <activity
+            android:name=".DaftarPengelolaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartPenginapanActivity"
+            android:exported="false" />
+        <activity
             android:name=".FoodListActivity"
             android:exported="false"
             android:label="@string/title_activity_food_list"
