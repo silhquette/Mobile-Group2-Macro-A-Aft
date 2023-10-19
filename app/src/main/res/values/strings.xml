@@ -1,9 +1,9 @@
-<resources>
-    <string name="app_name">JalanIn-Aja</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_naem" tools:ignore="DuplicateDefinition">JalanIn-Aja</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_food_list">FoodListActivity</string>
-    <string name="app_name">MacroProject</string>
+    <string name="name">MacroProject</string>
     <string name="aceh">TODO</string>
     <string name="sumatera_utara">TODO</string>
     <string name="kalimantan_timur">TODO</string>
@@ -25,4 +25,5 @@
     <string name="kalsel">Kalimantan Selatan</string>
     <string name="kaltim">Kalimantan Timur</string>
     <string name="sumut">Sumatera Utara</string>
+    <string name="app_name">JalanInAja</string>
 </resources>

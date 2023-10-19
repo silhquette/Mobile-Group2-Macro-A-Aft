@@ -7,54 +7,67 @@
     android:background="#9EC0E8"
     tools:context=".DaftarWisataActivity">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_arrow_back"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:layout_editor_absoluteX="13dp"
-        app:layout_editor_absoluteY="20dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:background="@drawable/arrow_back_foreground"
-        android:backgroundTint="#000000"/>
+        android:backgroundTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="13dp"
+        app:layout_editor_absoluteY="20dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="169dp"
         android:layout_height="54dp"
+        android:layout_marginStart="24dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Jelajahi Destinasi Wisata Pilihan"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_editor_absoluteX="24dp"
-        app:layout_editor_absoluteY="73dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_arrow_back"
+        app:layout_editor_absoluteX="24dp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="72dp"
         android:background="@drawable/foto"
         android:contentDescription="@string/foto"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="48dp" />
+        app:layout_constraintBottom_toTopOf="@+id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/v_provinsi"
         android:layout_width="183dp"
         android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/kotak_provinsi"
-        app:layout_editor_absoluteY="136dp"
-        app:layout_editor_absoluteX="24dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/tv_kotakprovinsi"
         android:layout_width="172dp"
         android:layout_height="18dp"
-        android:text="Nanggroe Aceh Darussalam"
-        android:textSize="12sp"
+        android:layout_marginStart="32dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Nanggroe Aceh Darussalam"
         android:textColor="@color/white"
-        app:layout_editor_absoluteX="32dp"
-        app:layout_editor_absoluteY="137dp"/>
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/v_provinsi"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
@@ -64,90 +77,132 @@
         android:background="@drawable/search_bar"
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/v_provinsi"
         app:queryHint="Cari Nama Provinsi" />
 
-    <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="83dp"
-        android:background="@drawable/museum_tsunami_aceh"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="180dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/museum_tsunami_aceh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
         app:layout_editor_absoluteX="20dp"
-        app:layout_editor_absoluteY="214dp"/>
-    
+        app:layout_editor_absoluteY="214dp"
+        tools:ignore="MissingConstraints" />
+
     <TextView
-        android:layout_width="158dp"
+        android:id="@+id/textView2"
+        android:layout_width="175dp"
         android:layout_height="39dp"
-        android:text="Museum Tsunami Aceh"
-        android:textSize="10sp"
-        android:textColor="@color/black"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Museum Tsunami Aceh"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         app:layout_editor_absoluteX="20dp"
-        app:layout_editor_absoluteY="297dp" />
+        app:layout_editor_absoluteY="297dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:layout_width="155dp"
-        android:layout_height="22dp"
-        android:text="Kec. Baiturrahman, Kota Banda Aceh, Aceh"
-        android:textSize="8sp"
-        android:textColor="@color/black"
+        android:id="@+id/textView3"
+        android:layout_width="175dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Kec. Baiturrahman, Kota Banda Aceh, Aceh"
+        android:textColor="@color/black"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_editor_absoluteX="20dp"
-        app:layout_editor_absoluteY="310dp"/>
+        app:layout_editor_absoluteY="300dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="326dp" />
 
-    <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="83dp"
-        android:background="@drawable/pantan_terong"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/pantan_terong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:layout_editor_absoluteX="20dp"
-        app:layout_editor_absoluteY="345dp"/>
+        app:layout_editor_absoluteY="345dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="133dp"
         android:layout_height="39dp"
-        android:text="Pantan Terong"
-        android:textSize="10sp"
-        android:textColor="@color/black"
+        android:layout_marginStart="24dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Pantan Terong"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_editor_absoluteX="20dp"
-        app:layout_editor_absoluteY="428dp"/>
+        app:layout_editor_absoluteY="428dp" />
 
     <TextView
-        android:layout_width="140dp"
-        android:layout_height="20dp"
-        android:text="Kec. Bebesan, Kab. Aceh Tengah, Aceh"
-        android:textSize="8sp"
-        android:textColor="@color/black"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Kec. Bebesan, Kab. Aceh Tengah, Aceh"
+        android:textColor="@color/black"
+        android:textSize="9sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_editor_absoluteX="20dp"
-        app:layout_editor_absoluteY="442dp"/>
+        app:layout_editor_absoluteY="442dp" />
 
-    <ImageButton
-        android:layout_width="150dp"
-        android:layout_height="83dp"
-        android:background="@drawable/pantai_lampuuk"
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="180dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/pantai_lampuuk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
         app:layout_editor_absoluteX="220dp"
-        app:layout_editor_absoluteY="214dp"/>
+        app:layout_editor_absoluteY="214dp" />
 
     <TextView
         android:layout_width="146dp"
         android:layout_height="39dp"
-        android:text="Pantai Lampuuk"
-        android:textSize="10sp"
-        android:textColor="@color/black"
+        android:layout_marginEnd="60dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Pantai Lampuuk"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_editor_absoluteX="220dp"
-        app:layout_editor_absoluteY="297dp"/>
+        app:layout_editor_absoluteY="297dp"
+        tools:layout_editor_absoluteY="310dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:layout_width="146dp"
-        android:layout_height="22dp"
-        android:text="Kec. Lhonknga, Kab. Aceh Besar, Aceh."
-        android:textSize="8sp"
-        android:textColor="@color/black"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="45dp"
         android:fontFamily="@font/poppins_medium"
-        app:layout_editor_absoluteX="220dp"
-        app:layout_editor_absoluteY="310dp"/>
+        android:text="Kec. Lhonknga, Kab. Aceh Besar, Aceh."
+        android:textColor="@color/black"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_editor_absoluteX="225dp"
+        app:layout_editor_absoluteY="310dp"
+        tools:layout_editor_absoluteY="326dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
