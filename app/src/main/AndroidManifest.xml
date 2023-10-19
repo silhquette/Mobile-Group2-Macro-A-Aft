@@ -13,7 +13,19 @@
         android:theme="@style/Theme.JalanInAja"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".DistrictsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarPengelolaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StartPenginapanActivity"
             android:exported="false" />
         <activity
             android:name=".FoodListActivity"
@@ -30,7 +42,7 @@
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".DaftarActivity$DaftarActivity">
+    tools:context=".DaftarActivity">
 
     <ImageView
         android:layout_width="331dp"
@@ -15,8 +15,9 @@
         android:rotationX="180"
         android:rotationY="180"
         android:src="@drawable/dekorasipojok"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-55dp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -26,12 +27,13 @@
         android:layout_marginEnd="108dp"
         android:layout_marginBottom="388dp"
         android:src="@drawable/dekorasipojok"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="-55dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -85,13 +87,13 @@
                 android:id="@+id/inputnamalengkap"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="352dp"
                 android:background="@drawable/cornerstyle"
                 android:hint="    Input Nama Lengkap"
                 android:padding="10dp"
                 android:textSize="15sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.491"
@@ -318,7 +320,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_masuk"
+                android:id="@+id/btn_daftar"
                 android:layout_width="220dp"
                 android:layout_height="42dp"
                 android:layout_marginTop="-200dp"
