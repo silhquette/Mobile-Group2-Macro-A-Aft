@@ -139,7 +139,7 @@ class HomeActivity : AppCompatActivity(),
                 OnNavigationItemSelectedListener@ true
             }
             R.id.foods -> {
-                val intent = Intent(this@HomeActivity, FoodListActivity::class.java)
+                val intent = Intent(this@HomeActivity, DistrictsActivity::class.java)
                 startActivity(intent)
                 OnNavigationItemSelectedListener@ true
             }

@@ -7,8 +7,9 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.jalanin_aja.databinding.ActivityFoodListBinding
 
-class FoodListActivity : AppCompatActivity(), View.OnClickListener, RecyclerViewClickListener {
+class FoodListActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityFoodListBinding
+    private lateinit var foodAdapter: FoodAdapter
     private lateinit var foodArrayList: ArrayList<Foods>
     private lateinit var cardImage: Array<Int>
     private lateinit var cardName: Array<String>
@@ -68,6 +69,12 @@ class FoodListActivity : AppCompatActivity(), View.OnClickListener, RecyclerView
         binding.rvFood.setHasFixedSize(true)
         foodArrayList = arrayListOf<Foods>()
         getFoodsData()
+        foodAdapter = FoodAdapter(foodArrayList)
+        binding.rvFood.adapter = foodAdapter
+        foodAdapter.onItemClick = {
+            val intent = Intent(this, FoodDetailActivity::class.java)
+            startActivity(intent)
+        }
 
         // button click
         binding.btnBack.setOnClickListener(this)
@@ -79,7 +86,6 @@ class FoodListActivity : AppCompatActivity(), View.OnClickListener, RecyclerView
             val foods = Foods(cardImage[i], cardName[i], cardAddress[i], 0)
             foodArrayList.add(foods)
         }
-        binding.rvFood.adapter = FoodAdapter(foodArrayList)
     }
 
     override fun onClick(v: View) {
@@ -88,11 +94,6 @@ class FoodListActivity : AppCompatActivity(), View.OnClickListener, RecyclerView
                 onBackPressed()
             }
         }
-    }
-
-    override fun onItemClicked(currentItem: Any) {
-        val intent = Intent(this, FoodDetailActivity::class.java)
-        startActivity(intent)
     }
 }
 

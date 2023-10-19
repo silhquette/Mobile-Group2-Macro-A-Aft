@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 
 class FoodAdapter (private val foodList: ArrayList<Foods>) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
-    var onItemClick: RecyclerViewClickListener? = null
+    var onItemClick: ((Foods) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.food_card, parent, false)
         return FoodViewHolder(itemView)
@@ -21,7 +21,7 @@ class FoodAdapter (private val foodList: ArrayList<Foods>) : RecyclerView.Adapte
         holder.foodAddress.text = currentItem.foodAddress
 
         holder.itemView.setOnClickListener{
-            onItemClick?.onItemClicked(currentItem)
+            onItemClick?.invoke(currentItem)
         }
     }
 

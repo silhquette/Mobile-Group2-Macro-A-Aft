@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 
 class DistrictAdapter (private val districtList: ArrayList<District>) : RecyclerView.Adapter<DistrictAdapter.DistrictViewHolder>() {
+    var onItemClick : ((District) -> Unit)? = null
+
     class DistrictViewHolder(itemView : View): RecyclerView.ViewHolder(itemView) {
         val districtImage: ShapeableImageView = itemView.findViewById(R.id.card_image)
         val districtName: TextView = itemView.findViewById(R.id.card_name)
@@ -15,7 +17,7 @@ class DistrictAdapter (private val districtList: ArrayList<District>) : Recycler
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DistrictViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.district_card, parent, false)
-        return DistrictAdapter.DistrictViewHolder(itemView)
+        return DistrictViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
@@ -26,5 +28,9 @@ class DistrictAdapter (private val districtList: ArrayList<District>) : Recycler
         val currentItem = districtList[position]
         holder.districtImage.setImageResource(currentItem.districtImage)
         holder.districtName.text = currentItem.districtName
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(currentItem)
+        }
     }
 }
