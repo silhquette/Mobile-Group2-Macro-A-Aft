@@ -3,13 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/blue_1"
-    tools:context=".FoodListActivity">
+    android:layout_height="wrap_content"
+    tools:context=".DistrictsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="250dp"
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -40,28 +51,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:text="Jelajahi Wisata Kuliner Pilihan!"
+            android:text="Beda Kota, Beda Cita Rasa!"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_back" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_location"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
+        <TextView
+            android:id="@+id/tv_sub_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/btn_food_location"
-            android:paddingHorizontal="32dp"
-            android:drawableStart="@drawable/baseline_location_on_24"
-            android:drawablePadding="5dp"
-            android:drawableTint="@color/blue_4"
-            android:text="Kabupaten Lebak"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:layout_marginEnd="32dp"
+            android:text="Ayo temukan makanan favoritmu berdasarkan daerah di Indonesia!"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_popular" />
 
@@ -87,18 +91,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_location" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_sub_header" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_food"
-            android:layout_width="wrap_content"
+            android:id="@+id/rv_district"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_Search"
-            tools:listitem="@layout/food_card" />
-
-
+            tools:listitem="@layout/district_card"
+            app:layout_constraintTop_toBottomOf="@+id/et_Search" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </ScrollView>

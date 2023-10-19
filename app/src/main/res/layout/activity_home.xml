@@ -9,11 +9,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/img_hero"
@@ -110,11 +110,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:backgroundTint="#2EFFFFFF"
-                    android:paddingHorizontal="12dp"
+                    android:paddingHorizontal="16dp"
                     android:paddingVertical="4dp"
                     android:text="Jelajahi Tempat Wisata"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/et_Search" />
 
@@ -198,10 +197,11 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_nearby"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_nearby" />
 
