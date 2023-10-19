@@ -1,4 +1,4 @@
-package com.example.macroproject
+package com.example.jalanin_aja
 
 import android.os.Parcel
 import android.os.Parcelable

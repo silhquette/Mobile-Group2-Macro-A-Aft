@@ -148,6 +148,11 @@ class HomeActivity : AppCompatActivity(),
                 startActivity(intent)
                 OnNavigationItemSelectedListener@ true
             }
+            R.id.places -> {
+                val intent = Intent(this@HomeActivity, DaftarProvinsiActivity::class.java)
+                startActivity(intent)
+                OnNavigationItemSelectedListener@ true
+            }
             else -> {
                 val intent = Intent(this@HomeActivity, FoodDetailActivity::class.java)
                 startActivity(intent)

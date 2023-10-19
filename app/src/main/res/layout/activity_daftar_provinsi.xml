@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DaftarProvinsiActivity"
-    tools:ignore="MissingDefaultResource">
+    tools:context=".DaftarProvinsiActivity">
 
     <ImageView
         android:id="@+id/img_ellipse"
         android:layout_width="match_parent"
         android:layout_height="251dp"
         android:contentDescription="@string/ellipse"
+        android:layout_marginTop="-20dp"
         android:src="@drawable/ellipse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -66,6 +66,7 @@
         android:layout_marginTop="23dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/imageitem"
         app:layout_constraintTop_toBottomOf="@+id/img_ellipse"
         app:layout_constraintVertical_bias="0.670" />
 
