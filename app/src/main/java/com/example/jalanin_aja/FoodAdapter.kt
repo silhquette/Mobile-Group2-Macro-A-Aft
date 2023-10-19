@@ -8,17 +8,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.imageview.ShapeableImageView
 
 class FoodAdapter (private val foodList: ArrayList<Foods>) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
+    var onItemClick: ((Foods) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.food_card, parent, false)
         return FoodViewHolder(itemView)
     }
-
 
     override fun onBindViewHolder(holder: FoodAdapter.FoodViewHolder, position: Int) {
         val currentItem = foodList[position]
         holder.foodImage.setImageResource(currentItem.foodImage)
         holder.foodName.text = currentItem.foodName
         holder.foodAddress.text = currentItem.foodAddress
+
+        holder.itemView.setOnClickListener{
+            onItemClick?.invoke(currentItem)
+        }
     }
 
     override fun getItemCount(): Int {
