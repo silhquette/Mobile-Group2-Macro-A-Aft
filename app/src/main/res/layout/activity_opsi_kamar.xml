@@ -58,6 +58,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shapeableImageView2"
         android:layout_width="match_parent"
         android:layout_height="190dp"
         android:background="@drawable/caripenginapan"
@@ -96,5 +97,36 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="35dp" />
+
+    <ImageView
+        android:layout_width="347dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="444dp"
+        android:background="@drawable/kamar1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/shapeableImageView2"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="347dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="236dp"
+        android:background="@drawable/kamar2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/shapeableImageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="347dp"
+        android:layout_height="167dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/kamar3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/shapeableImageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

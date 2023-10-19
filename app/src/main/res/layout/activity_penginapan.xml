@@ -74,8 +74,81 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421"
+        app:layout_constraintVertical_bias="0.424"
         tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:contentDescription="scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="97dp"
+            android:layout_height="144dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/hotel1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="58dp" />
+        <ImageView
+            android:layout_width="97dp"
+            android:layout_height="144dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/hotel2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="58dp" />
+
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="144dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/hotel3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="58dp" />
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="144dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/hotel4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="58dp" />
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="144dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/hotel5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="58dp" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
 
     <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="match_parent"
@@ -88,6 +161,82 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.863"
         tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:contentDescription="scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/vila1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.912"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="58dp" />
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/vila2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.912"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="58dp" />
+
+            <ImageView
+                android:layout_width="91dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/vila3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.912"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="58dp" />
+            <ImageView
+                android:layout_width="91dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/vila4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.912"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="58dp" />
+            <ImageView
+                android:layout_width="91dp"
+                android:layout_height="130dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="500dp"
+                android:background="@drawable/vila5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.912"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="58dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
 
     <ImageView
         android:layout_width="70dp"
